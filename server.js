@@ -38,7 +38,7 @@ app.get("/api/dev", (req, res) => {
   const sa = s.split("\n")
   sa.shift()
   sa.shift()
-  const json = sa.map(s => s.split(":")[0].trim()).filter(s => s && !s.startsWith("lo"))
+  const json = sa.map(s => s.split(":")[0].trim()).filter(s => s && !s.startsWith("lo") && !s.startsWith("w"))
   res.json(json)
 })
 
